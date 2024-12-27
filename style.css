@@ -1,0 +1,80 @@
+#tickers-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stock-box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+    transition: background-color 0.5s, color 0.5s;
+    background: #eee;
+    color: black;
+}
+
+/* Price change color classes */
+.dark-red {
+    color: #880000;
+}
+
+.red {
+    color: #FF0000;
+}
+
+.gray {
+    color: #808080;
+}
+
+.green {
+    color: #00BB00;
+}
+
+.dark-green {
+    color: #006600;
+}
+
+/* Flashing effects for price changes */
+.red-flash {
+    background-color: #FF0000 !important;
+    animation: flashRed 1s ease-in-out;
+}
+
+.green-flash {
+    background-color: #00BB00 !important;
+    animation: flashGreen 1s ease-in-out;
+}
+
+.gray-flash {
+    background-color: #808080 !important;
+    animation: flashGray 1s ease-in-out;
+}
+
+/* Keyframes for flash animations */
+@keyframes flashRed {
+    0% {
+        background-color: #FF0000;
+    }
+    100% {
+        background-color: #eee;
+    }
+}
+
+@keyframes flashGreen {
+    0% {
+        background-color: #00BB00;
+    }
+    100% {
+        background-color: #eee;
+    }
+}
+
+@keyframes flashGray {
+    0% {
+        background-color: #808080;
+    }
+    100% {
+        background-color: #eee;
+    }
+}
